@@ -1,0 +1,42 @@
+body {
+	font-family: 'Poppins', sans-serif;
+
+}
+
+.card,
+.card-header,
+.card-footer {
+	color: #127780;
+
+	background-color: #2bff6d;
+	background-image: linear-gradient(147deg, #2bff6d 0%, #7bffb4 74%);
+	background-image: -webkit-linear-gradient(147deg, #2bff6d 0%, #7bffb4 74%);
+
+
+	border: none;
+}
+
+.card-footer {
+	color: #127780;
+}
+
+
+.btn-color {
+	color: #127780;
+	background-color: #127780;
+}
+
+/* .card-header {
+	border: none;
+	background-color: #15EDA3;
+} */
+.nav-item a {
+	border-radius: 0.5rem;
+	color: #127780;
+	background-color: #ffffff;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+	background-color: #127780;
+}
