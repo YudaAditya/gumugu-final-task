@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Homepage extends CI_Controller
+class Hasil extends CI_Controller
 {
 
 	/**
@@ -21,7 +21,7 @@ class Homepage extends CI_Controller
 	 */
 	public function index()
 	{
-		$data['title'] = "Beranda Pencarian";
-		$this->load->view('homepage', $data);
+		$data['title'] = "Hasil Pencarian";
+		$this->load->view('hasil', $data);
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Homepage extends CI_Controller
+class Chart extends CI_Controller
 {
 
 	/**
@@ -21,7 +21,7 @@ class Homepage extends CI_Controller
 	 */
 	public function index()
 	{
-		$data['title'] = "Beranda Pencarian";
-		$this->load->view('homepage', $data);
+		$data['title'] = "Data Chart";
+		$this->load->view('chart', $data);
 	}
 }
