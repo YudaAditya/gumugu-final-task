@@ -13,7 +13,8 @@
 			</div>
 			<div class="row">
 				<div class="col-auto mx-auto text-center">
-					<h1 class="display-4">Hasil...</h1>
+					<h1 class="display-4">Tunggu sebentar</h1>
+					<h3 class="">Anda akan segera diarahkan ke file</h3>
 				</div>
 			</div>
 			<div class="row pt-5">
