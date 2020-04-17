@@ -18,6 +18,20 @@
 					<p>Semua dalam satu tempat.</p>
 				</div>
 			</div>
+
+			
+
+			<!-- <?php echo form_open('homepage/search'); ?>
+
+				<div class="form-group">
+					<label for="cari">data yang dicari</label>
+					<input type="text" class="form-control" id="cari" name="cari" placeholder="cari" autocomplete="off" autofocus>
+				</div>
+				<input class="btn btn-primary" type="submit" value="Cari" name="submit">
+
+			<?php echo form_close(); ?> -->
+
+			<?php echo form_open('homepage/search'); ?>
 			<div class="row pt-3">
 				<div class="col-5 mx-auto">
 					<div id="searchBar" class="input-group mb-3 input-group-lg">
@@ -26,12 +40,14 @@
 								<i class="fas fa-search"></i>
 							</span>
 						</div>
-						<input type="text" class="form-control" placeholder="Cari disini ya..." aria-label="" aria-describedby="basic-addon1">
-						<button id="searchButton" class="btn btn-outline-secondary" type="button">Cari</button>
+						<input type="text" class="form-control" placeholder="Cari disini ya..." aria-label="" aria-describedby="basic-addon1" id="cari" name="cari" placeholder="cari" autocomplete="off" autofocus>
+						
+						<button id="searchButton" class="btn btn-outline-secondary" type="button"><input class="btn" type="submit" value="Cari" name="submit"></button>
 					</div>
 				</div>
 
 			</div>
+			<?php echo form_close(); ?>
 
 		</div>
 	</section>
@@ -66,7 +82,7 @@
 							<div class="row">
 								<div class="col">
 									<h5 class="card-title text-uppercase text-muted mb-0">Total Clicked</h5>
-									<span class="h2 font-weight-bold mb-0">350,897</span>
+									<span class="h2 font-weight-bold mb-0"><?php echo $this->db->count_all('search'); ?></span>
 								</div>
 								<div class="col-auto">
 									<div class="img-icon bg-green">

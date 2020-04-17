@@ -2,6 +2,18 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="<?php echo base_url('theme/bootstrap/js/bootstrap.js') ?>"></script>
 <script src="<?php echo base_url('theme/bootstrap/js/bootstrap.bundle.js') ?>"></script>
-<script src="<?php echo base_url('theme/chart/Chart.js') ?>"></script>
-<script src="<?php echo base_url('theme/custom/js/bar-chart.js') ?>"></script>
-<script src="<?php echo base_url('theme/custom/js/pie-chart.js') ?>"></script>
+<script src="<?php echo base_url('theme/js/jquery-3.4.1.min.js') ?>"></script>
+<script src="<?php echo base_url('theme/datepicker/js/bootstrap-datepicker.js')?> "></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.created').datepicker({
+            format: "yyyy-mm-dd",
+            autoclose:true
+        });
+
+        $('.expired').datepicker({
+            format: "yyyy-mm-dd",
+            autoclose:true
+        });
+    });
+</script>

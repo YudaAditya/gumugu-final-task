@@ -31,36 +31,46 @@
 								<div class="card-body">
 									<div class="container">
 										<form>
-											<div class="form-group row">
-												<label for="name" class="col-sm-4 col-form-label"><b>Nama Dokumen</b></label>
-												<div class="col-sm-8">
-													<input type="text" readonly class="form-control-plaintext" id="name" value="email@example.com">
+											<?php foreach ($dokumen as $d) { ?>
+												<div class="form-group row">
+													<label for="name" class="col-sm-4 col-form-label"><b>ID Dokumen</b></label>
+													<div class="col-sm-8">
+														<input type="text" readonly class="form-control-plaintext" id="name" value="<?php echo $d->id ?>">
+													</div>
 												</div>
-											</div>
-											<div class="form-group row">
-												<label for="idDokumen" class="col-sm-4 col-form-label"><b>ID Dokumen</b></label>
-												<div class="col-sm-8">
-													<input type="text" readonly class="form-control" id="idDokumen" placeholder="Password">
+												<div class="form-group row">
+													<label for="name" class="col-sm-4 col-form-label"><b>Nama Dokumen</b></label>
+													<div class="col-sm-8">
+														<input type="text" readonly class="form-control-plaintext" id="name" value="<?php echo $d->name ?>">
+													</div>
 												</div>
-											</div>
-											<div class="form-group row">
-												<label for="author" class="col-sm-4 col-form-label"><b>Penerbit</b></label>
-												<div class="col-sm-8">
-													<input type="text" readonly class="form-control" id="author" placeholder="Password">
+												<div class="form-group row">
+													<label for="name" class="col-sm-4 col-form-label"><b>Penerbit</b></label>
+													<div class="col-sm-8">
+														<input type="text" readonly class="form-control-plaintext" id="name" value="<?php echo $d->publisher ?>">
+													</div>
 												</div>
-											</div>
-											<div class="form-group row">
-												<label for="created" class="col-sm-4 col-form-label"><b>Dibuat</b></label>
-												<div class="col-sm-8">
-													<input type="text" readonly class="form-control" id="created" placeholder="Password">
+												<div class="form-group row">
+													<label for="name" class="col-sm-4 col-form-label"><b>Dibuat</b></label>
+													<div class="col-sm-8">
+														<input type="text" readonly class="form-control-plaintext" id="name" value="<?php echo $d->created ?>">
+													</div>
 												</div>
-											</div>
-											<div class="form-group row">
-												<label for="expired" class="col-sm-4 col-form-label"><b>Berakhir</b></label>
-												<div class="col-sm-8">
-													<input type="text" readonly class="form-control" id="expired" placeholder="Password">
+												<div class="form-group row">
+													<label for="name" class="col-sm-4 col-form-label"><b>Berakhir</b></label>
+													<div class="col-sm-8">
+														<input type="text" readonly class="form-control-plaintext" id="name" value="<?php echo $d->expired ?>">
+													</div>
 												</div>
-											</div>
+												<div class="form-group row">
+													<label for="name" class="col-sm-4 col-form-label"><b>File</b></label>
+													<div class="col-sm-8">
+														<input type="text" readonly class="form-control-plaintext" id="name" value="<?php echo $d->file ?>">
+													</div>
+												</div>
+
+
+											<?php } ?>
 										</form>
 									</div>
 
@@ -84,7 +94,7 @@
 									<div class="container">
 										<div class="row">
 											<div class="col text-center">
-												<button class="btn btn-primary">Unduh</button>
+												<button class="btn btn-primary">Go to File</button>
 											</div>
 										</div>
 									</div>
