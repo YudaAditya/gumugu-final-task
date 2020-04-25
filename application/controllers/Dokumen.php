@@ -63,4 +63,9 @@ class Dokumen extends CI_Controller
 		$data['title'] = "Detail";
 		$this->load->view('hasil', $data);
 	}
+	public function redirect($id)
+	{
+		$data['dokumen'] = $this->m->getById($id, 'document');
+		$this->load->view('redirect', $data);
+	}
 }

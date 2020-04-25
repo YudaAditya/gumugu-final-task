@@ -47,4 +47,8 @@ class Hasil extends CI_Controller
 		// $this->db->where('id', $id);
 		// $this->db->update('document');
 	}
+
+	function save_data()
+	{
+	}
 }

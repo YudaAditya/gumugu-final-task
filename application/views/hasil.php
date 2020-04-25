@@ -13,7 +13,7 @@
 			</div>
 			<div class="row">
 				<div class="col-auto mx-auto text-center">
-					<h1 class="display-4">Hasil...</h1>
+					<h1 class="display-4">Detail</h1>
 				</div>
 			</div>
 			<div class="row pt-5">
@@ -94,7 +94,9 @@
 									<div class="container">
 										<div class="row">
 											<div class="col text-center">
-												<button class="btn btn-primary">Go to File</button>
+												<a href="<?php echo site_url('dokumen/redirect/' . $d->id) ?>">
+													<button class="btn btn-primary">Go to File</button>
+												</a>
 											</div>
 										</div>
 									</div>
