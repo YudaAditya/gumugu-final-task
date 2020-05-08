@@ -3,7 +3,7 @@
 
 	<!-- Copyright -->
 	<div class="footer-copyright text-center py-3">© 2020 Copyright:
-		<a href="https://gumugu.com/"> gumugu.com</a>
+		<a href="<?php echo base_url('homepage/bawah')  ?>">Gumugu</a>
 	</div>
 	<!-- Copyright -->
 

@@ -68,9 +68,6 @@
 														<input type="text" readonly class="form-control-plaintext" id="name" value="<?php echo $d->file ?>">
 													</div>
 												</div>
-
-
-											<?php } ?>
 										</form>
 									</div>
 
@@ -94,13 +91,12 @@
 									<div class="container">
 										<div class="row">
 											<div class="col text-center">
-												<a href="<?php echo site_url('dokumen/redirect/' . $d->id) ?>">
-													<button class="btn btn-primary">Go to File</button>
-												</a>
+												<a href="<?php echo base_url('hasil/save_data/' . $d->id)  ?>" class="btn btn-primary" >Go To File</a>
 											</div>
 										</div>
 									</div>
 								</div>
+								<?php } ?>
 							</div>
 						</div>
 					</div>

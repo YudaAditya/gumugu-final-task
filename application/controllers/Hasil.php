@@ -18,8 +18,6 @@ class Hasil extends CI_Controller
 		$this->load->view('hasil', $data);
 	}
 
-
-
 	function view()
 	{
 		if ($this->uri->segment(3)) {
@@ -48,7 +46,25 @@ class Hasil extends CI_Controller
 		// $this->db->update('document');
 	}
 
-	function save_data()
+	function save_data($id)
 	{
+		$source='source=final';
+		$medium='&medium=detail-';
+		$campaign='&campaign=contoh';
+		$data = $this->db->get_where('document', ['id' => $id])->row();
+		$url=$data->source."?".$source.$medium.$data->id.$campaign;
+
+		// buat ngitung
+		$now = date("Y-m-d");
+		$urls = array(
+			'date'    => $now,
+			'url'	  => $url
+		);
+		$this->m->count_dv('goto', $urls);
+		redirect($url);
+	}
+
+	function pindah(){
+		$this->load->view('redirect');
 	}
 }

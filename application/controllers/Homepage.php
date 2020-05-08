@@ -35,4 +35,12 @@ class Homepage extends CI_Controller
 
 		$this->load->view('dokumen', $data);
 	}
+
+	function bawah(){
+		$source='source=final';
+		$medium='&medium=homepage-footer';
+		$campaign='&campaign=contoh';
+
+		redirect("https://www.gumugu.com?".$source.$medium.$campaign);
+	}
 }
