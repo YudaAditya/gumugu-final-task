@@ -18,15 +18,6 @@ class Hasil extends CI_Controller
 		$this->load->view('hasil', $data);
 	}
 
-	function view()
-	{
-		if ($this->uri->segment(3)) {
-			$data   = file_get_contents('./datafile/' . $this->uri->segment(3));
-		}
-		$name   = $this->uri->segment(3);
-		force_download($name, $data);
-	}
-
 	function fungsi($id)
 	{
 		$data = $this->db->get_where('document', ['id' => $id])->row();
@@ -35,15 +26,17 @@ class Hasil extends CI_Controller
 
 	function download($id)
 	{
+		
 		// buat ngitung
 		$now = date("Y-m-d");
 		$date = array(
 			'date'    => $now
 		);
+		
 		$this->m->count_dv('download', $date);
-		// $this->db->set('download', 'download+1', FALSE);
-		// $this->db->where('id', $id);
-		// $this->db->update('document');
+		// $this->fungsi($id);
+		$data = $this->db->get_where('document', ['id' => $id])->row();
+		force_download('datafile/' . $data->file, NULL);
 	}
 
 	function save_data($id)

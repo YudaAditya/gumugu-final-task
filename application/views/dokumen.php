@@ -34,11 +34,6 @@
 						</div>
 						<div class="card-body">
 							<div class="container">
-								<!-- <?php foreach ($dokumen as $d) { ?>
-                <embed src="<?php echo base_url() . 'dokumen/' . $d->file ?>" type="application/pdf" width="100%" height="700px">
-                <a href="<?= base_url() . 'dokumen/' . $d->file ?>" target="_blank">Show My Pdf</a>
-
-			<?php } ?> -->
 
 								<?php
 								if (isset($jumlah)) {
@@ -67,21 +62,7 @@
 											<td><?php echo $d->file; ?></td>
 											<td>
 												<a class="btn btn-primary" href="<?php echo site_url('dokumen/detail/' . $d->id) ?>">Detail</a>
-												<!-- <object data="<?php echo base_url() . 'datafile/' . $d->file; ?>" type="application/pdf" width="100%" height="100%">
-							<p>Alternative text - include a link <a href="<?php echo base_url() . 'datafile/' . $d->file; ?>">to the PDF!</a></p>
-						</object> -->
-												<!-- <a href="<?php echo base_url('hasil/view/' . $d->file)  ?>" class="btn btn-sm btn-primary" target="_blank">View</a> -->
-
-
-
-												<!-- <a href="<?php echo base_url('hasil/fungsi/') . $d->id ?>" class="btn btn-sm btn-success">
-								<?php echo form_open('hasil/download/' . $d->id) ?>
-								<input class="btn" type="submit" name="submit" value="Detail">
-								<input class="btn" type="submit" name="submit" value="Go To file">
-
-								<?php echo form_close() ?>
-
-							</a> -->
+												
 												<a href="<?php echo base_url() ?>"></a>
 
 											</td>

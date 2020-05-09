@@ -38,7 +38,7 @@ class Homepage extends CI_Controller
 
 	function bawah(){
 		$source='source=final';
-		$medium='&medium=homepage-footer';
+		$medium='&medium=footer';
 		$campaign='&campaign=contoh';
 
 		redirect("https://www.gumugu.com?".$source.$medium.$campaign);

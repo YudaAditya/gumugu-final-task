@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2020 at 09:33 PM
+-- Generation Time: May 09, 2020 at 08:31 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -35,8 +35,6 @@ CREATE TABLE `document` (
   `created` date NOT NULL,
   `expired` date NOT NULL,
   `file` text NOT NULL,
-  `view` int(11) NOT NULL DEFAULT 0,
-  `download` int(11) NOT NULL DEFAULT 0,
   `source` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -44,12 +42,12 @@ CREATE TABLE `document` (
 -- Dumping data for table `document`
 --
 
-INSERT INTO `document` (`id`, `name`, `publisher`, `created`, `expired`, `file`, `view`, `download`, `source`) VALUES
-(6, 'Transkrip Sementara', 'Unsyiah', '2020-01-01', '2020-06-30', 'cetak transkrip sementara kurikulum baru.pdf', 0, 16, 'https://krsonline.unsyiah.ac.id/'),
-(7, 'Implementasi Pembelajaran Menggambar di Sekolah Dasar: MENGGAMBAR SEBAGAI ALAT PENDIDIKAN', ' Moeljadi Pranata ', '2010-02-14', '2025-10-22', '01.-Implementasi.pdf', 0, 6, 'https://www.researchgate.net/publication/321635737_IMPLEMENTASI_PEMBELAJARAN_ENTREPRENEURIAL_DALAM_PENDIDIKAN_SENI_RUPA'),
-(8, 'SPEECH RECOGNITION WITH DEEP RECURRENT NEURAL NETWORKS', 'Department of Computer Science, University of Toronto', '2016-03-15', '2020-12-15', 'Speech recognition with deep recurrent neural networks.pdf', 0, 11, 'https://web.cs.toronto.edu/'),
-(9, 'CV Yuda', 'Yuda Aditya', '2019-01-01', '2025-12-31', '1.cv Yuda 2019_compressed.pdf', 0, 10, 'https://www.linkedin.com/in/yudaaditya/'),
-(10, 'Seminar', 'Unsyiah', '2020-04-08', '2020-05-22', 'Jadwal Seminar KKP Tahap I.pdf', 0, 15, 'https://unsyiah.ac.id/');
+INSERT INTO `document` (`id`, `name`, `publisher`, `created`, `expired`, `file`, `source`) VALUES
+(6, 'Transkrip Sementara', 'Unsyiah', '2020-01-01', '2020-06-30', 'cetak transkrip sementara kurikulum baru.pdf', 'https://krsonline.unsyiah.ac.id/'),
+(7, 'Implementasi Pembelajaran Menggambar di Sekolah Dasar: MENGGAMBAR SEBAGAI ALAT PENDIDIKAN', ' Moeljadi Pranata ', '2010-02-14', '2025-10-22', '01.-Implementasi.pdf', 'https://www.researchgate.net/publication/321635737_IMPLEMENTASI_PEMBELAJARAN_ENTREPRENEURIAL_DALAM_PENDIDIKAN_SENI_RUPA'),
+(8, 'SPEECH RECOGNITION WITH DEEP RECURRENT NEURAL NETWORKS', 'Department of Computer Science, University of Toronto', '2016-03-15', '2020-12-15', 'Speech recognition with deep recurrent neural networks.pdf', 'https://web.cs.toronto.edu/'),
+(9, 'CV Yuda', 'Yuda Aditya', '2019-01-01', '2025-12-31', '1.cv Yuda 2019_compressed.pdf', 'https://www.linkedin.com/in/yudaaditya/'),
+(10, 'Seminar', 'Unsyiah', '2020-04-08', '2020-05-22', 'Jadwal Seminar KKP Tahap I.pdf', 'https://unsyiah.ac.id/');
 
 -- --------------------------------------------------------
 
@@ -67,13 +65,32 @@ CREATE TABLE `download` (
 --
 
 INSERT INTO `download` (`id`, `date`) VALUES
-(1, '2020-04-10'),
-(2, '2020-04-10'),
-(3, '2020-04-10'),
-(4, '2020-04-10'),
-(5, '2020-04-10'),
-(6, '2020-04-10'),
-(7, '2020-04-10');
+(1, '2020-03-20'),
+(2, '2020-03-20'),
+(3, '2020-03-20'),
+(4, '2020-03-21'),
+(5, '2020-03-30'),
+(6, '2020-04-01'),
+(7, '2020-04-01'),
+(8, '2020-04-02'),
+(9, '2020-04-02'),
+(10, '2020-04-02'),
+(11, '2020-04-02'),
+(12, '2020-04-05'),
+(13, '2020-04-05'),
+(14, '2020-04-05'),
+(15, '2020-04-05'),
+(16, '2020-04-05'),
+(17, '2020-04-07'),
+(18, '2020-04-07'),
+(19, '2020-04-07'),
+(20, '2020-04-07'),
+(21, '2020-04-10'),
+(22, '2020-04-10'),
+(23, '2020-05-09'),
+(24, '2020-05-09'),
+(25, '2020-05-09'),
+(26, '2020-05-09');
 
 -- --------------------------------------------------------
 
@@ -92,18 +109,23 @@ CREATE TABLE `goto` (
 --
 
 INSERT INTO `goto` (`id`, `date`, `url`) VALUES
-(1, '2020-05-03', ''),
-(2, '2020-05-03', ''),
-(3, '2020-05-03', ''),
-(4, '2020-05-03', ''),
-(5, '2020-05-03', ''),
-(6, '2020-05-03', ''),
-(7, '2020-05-03', ''),
-(8, '2020-05-04', ''),
-(9, '2020-05-04', ''),
-(10, '2020-05-04', ''),
-(11, '2020-05-04', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh'),
-(12, '2020-05-04', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh');
+(1, '2020-04-04', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh'),
+(2, '2020-04-04', 'https://www.researchgate.net/publication/321635737_IMPLEMENTASI_PEMBELAJARAN_ENTREPRENEURIAL_DALAM_PENDIDIKAN_SENI_RUPA?source=final&medium=detail-7&campaign=contoh'),
+(3, '2020-04-11', 'https://web.cs.toronto.edu/?source=final&medium=detail-8&campaign=contoh'),
+(4, '2020-04-11', 'https://www.linkedin.com/authwall?trk=gf&trkInfo=AQHDkeIAy45umwAAAXH17rTQ5tjUwF6v7_cDLoTqXTFLDq1lvYTtMHuB2Uz9oeaxQt2N55r3otufSKlHCRxtugTaKvSVh73h9Myts-1TJ4Dd-eD395YUWEECFQuJohj3ImZfF4o=&originalReferer=http://127.0.0.1/final/dokumen/detail/9&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fyudaaditya%2F%3Fsource%3Dfinal%26medium%3Ddetail-9%26campaign%3Dcontoh'),
+(5, '2020-04-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
+(6, '2020-04-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
+(7, '2020-04-11', 'https://web.cs.toronto.edu/?source=final&medium=detail-8&campaign=contoh'),
+(8, '2020-04-12', 'https://www.researchgate.net/publication/321635737_IMPLEMENTASI_PEMBELAJARAN_ENTREPRENEURIAL_DALAM_PENDIDIKAN_SENI_RUPA?source=final&medium=detail-7&campaign=contoh'),
+(9, '2020-04-12', 'https://www.researchgate.net/publication/321635737_IMPLEMENTASI_PEMBELAJARAN_ENTREPRENEURIAL_DALAM_PENDIDIKAN_SENI_RUPA?source=final&medium=detail-7&campaign=contoh'),
+(10, '2020-04-12', 'https://web.cs.toronto.edu/?source=final&medium=detail-8&campaign=contoh'),
+(11, '2020-04-12', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh'),
+(12, '2020-04-12', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh'),
+(13, '2020-04-13', 'https://www.researchgate.net/publication/321635737_IMPLEMENTASI_PEMBELAJARAN_ENTREPRENEURIAL_DALAM_PENDIDIKAN_SENI_RUPA?source=final&medium=detail-7&campaign=contoh'),
+(14, '2020-04-13', 'https://web.cs.toronto.edu/?source=final&medium=detail-8&campaign=contoh'),
+(15, '2020-04-13', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
+(16, '2020-04-13', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
+(17, '2020-05-09', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh');
 
 -- --------------------------------------------------------
 
@@ -122,17 +144,21 @@ CREATE TABLE `search` (
 --
 
 INSERT INTO `search` (`id`, `keyword`, `date`) VALUES
-(1, 'trans', '2020-04-08'),
-(2, '', '2020-04-08'),
-(3, 'im', '2020-04-08'),
-(4, 'un', '2020-04-08'),
-(5, 'nilai', '2020-04-10'),
-(6, 'bambang', '2020-04-10'),
-(7, '', '2020-04-29'),
-(8, '', '2020-04-30'),
-(9, 'transkrip', '2020-04-30'),
-(10, '', '2020-04-30'),
-(11, 'cv', '2020-05-05');
+(1, 'trans', '2020-03-20'),
+(2, 'cv', '2020-03-20'),
+(3, 'im', '2020-03-20'),
+(4, 'un', '2020-03-20'),
+(5, 'nilai', '2020-03-30'),
+(6, 'bambang', '2020-03-30'),
+(7, 'implementasi', '2020-04-04'),
+(8, 'data', '2020-04-04'),
+(9, 'transkrip', '2020-04-04'),
+(10, 'krs', '2020-04-04'),
+(11, 'cv', '2020-04-05'),
+(12, 'trans', '2020-05-09'),
+(13, 'transkrip', '2020-05-10'),
+(14, 'transkrip', '2020-05-10'),
+(15, 'transkrip', '2020-05-10');
 
 --
 -- Indexes for dumped tables
@@ -177,19 +203,19 @@ ALTER TABLE `document`
 -- AUTO_INCREMENT for table `download`
 --
 ALTER TABLE `download`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `goto`
 --
 ALTER TABLE `goto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `search`
 --
 ALTER TABLE `search`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

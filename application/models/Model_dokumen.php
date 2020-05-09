@@ -33,9 +33,15 @@ class Model_dokumen extends CI_Model
 		$this->db->insert($tabel, $date);
 	}
 
-	function count($tabel)
+	function count($tabel,$param2)
 	{
-		$query = $this->db->query("SELECT *, COUNT(*) AS tanggal FROM $tabel GROUP BY keyword");
+		// $this->db->group_by('keyword');
+        // $this->db->select('keyword');
+        // $this->db->select("count(*) as total");
+        // return $this->db->from($tabel)
+        //   ->get()
+        //   ->result();
+		$query = $this->db->query("SELECT *, COUNT(*) AS total FROM $tabel GROUP BY $param2");
         return $query->result();
 	}
 

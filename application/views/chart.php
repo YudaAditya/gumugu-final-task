@@ -74,7 +74,7 @@
                         <div class="card-header bg-transparent">
                             <div class="row align-items-center pt-3">
                                 <div class="col">
-                                    <h3 class="mb-0 text-center">Dokumen Terbanyak di Akses</h3>
+                                    <h3 class="mb-0 text-center">Keyword terbanyak di cari</h3>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,30 @@
                             <div class="chart">
                                 
                                 <!-- Chart wrapper -->
-                                <canvas id="myChart" width="400" height="400"></canvas>
+                                <canvas id="searchChart"></canvas>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col-xl-12">
+                    <div class="card bg-default">
+                        <div class="card-header bg-transparent">
+                            <div class="row align-items-center pt-3">
+                                <div class="col">
+                                    <h3 class="mb-0 text-center">Link yang banyak diakses</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Chart -->
+                            <div class="chart">
+                                
+                                <!-- Chart wrapper -->
+                                <canvas id="gotoChart"></canvas>
+                                
                             </div>
                         </div>
                     </div>

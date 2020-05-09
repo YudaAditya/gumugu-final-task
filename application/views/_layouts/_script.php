@@ -33,31 +33,71 @@
 		}, 1000);
 	});
 </script>
-<script>
-    var ctx = document.getElementById('myChart').getContext('2d');
+<script type="text/javascript">
+    var ctx = document.getElementById('searchChart').getContext('2d');
     var chart = new Chart(ctx, {
-        // The type of chart we want to create
         type: 'bar',
-        // The data for our dataset
         data: {
-            labels: [<?php echo $keyword; ?>],
+            labels: [
+            <?php
+                if (count($charts)>0) {
+                    foreach ($charts as $data) {
+                        echo "'" .$data->keyword ."',";
+                    }
+                }
+            ?>
+            ],
             datasets: [{
-                label:'Data Search',
-                backgroundColor: ['rgb(255, 99, 132)', 'rgba(56, 86, 255, 0.87)', 'rgb(60, 179, 113)','rgb(175, 238, 239)'],
-                borderColor: ['rgb(255, 99, 132)'],
-                data: [<?php echo $jumlah; ?>]
+                label: 'Jumlah',
+                backgroundColor: '#ADD8E6',
+                borderColor: '##93C3D2',
+                data: [
+                <?php
+                    if (count($charts)>0) {
+                        foreach ($charts as $data) {
+                            echo $data->total . ", ";
+                        }
+                    }
+                ?>
+                ]
             }]
         },
-        // Configuration options go here
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
+    });   
+</script>
+<script type="text/javascript">
+    var ctx = document.getElementById('gotoChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: [
+            <?php
+                if (count($chartg)>0) {
+                    foreach ($chartg as $data) {
+                        echo "'" .$data->url ."',";
                     }
-                }]
-            }
-        }
-    });
+                }
+            ?>
+            ],
+            datasets: [{
+                label: 'Jumlah',
+                backgroundColor: [
+                    "#FF6384",
+                    "#63FF84",
+                    "#84FF63",
+                    "#8463FF",
+                    "#6384FF"
+                ],
+                data: [
+                <?php
+                    if (count($chartg)>0) {
+                        foreach ($chartg as $data) {
+                            echo $data->total . ", ";
+                        }
+                    }
+                ?>
+                ]
+            }]
+        },
+    });   
 </script>
 

@@ -15,7 +15,8 @@ class Chart extends CI_Controller
 	public function index()
 	{
 		$data['title'] = "Data Chart";
-		$data['chart']= $this->m->count("search");
+		$data['charts']= $this->m->count("search","keyword");
+		$data['chartg']= $this->m->count("goto","url");
 		$this->load->view('chart', $data);
 	}
 }
