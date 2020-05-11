@@ -43,7 +43,7 @@ class Hasil extends CI_Controller
 	{
 		$source='source=final';
 		$medium='&medium=detail-';
-		$campaign='&campaign=contoh';
+		$campaign='&campaign=data';
 		$data = $this->db->get_where('document', ['id' => $id])->row();
 		$url=$data->source."?".$source.$medium.$data->id.$campaign;
 

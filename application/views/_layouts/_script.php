@@ -35,22 +35,23 @@
 </script>
 <script type="text/javascript">
     var ctx = document.getElementById('searchChart').getContext('2d');
+    var labell = [
+        <?php
+            if (count($charts)>0) {
+                foreach ($charts as $data) {
+                    echo "'" .$data->keyword ."',";
+                }
+            }
+        ?>
+    ];
     var chart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: [
-            <?php
-                if (count($charts)>0) {
-                    foreach ($charts as $data) {
-                        echo "'" .$data->keyword ."',";
-                    }
-                }
-            ?>
-            ],
+            labels: labell,
             datasets: [{
                 label: 'Jumlah',
-                backgroundColor: '#ADD8E6',
-                borderColor: '##93C3D2',
+                backgroundColor:'#339999',
+                borderColor: '#93C3D2',
                 data: [
                 <?php
                     if (count($charts)>0) {
@@ -66,27 +67,37 @@
 </script>
 <script type="text/javascript">
     var ctx = document.getElementById('gotoChart').getContext('2d');
+    var labell = [
+        <?php
+            if (count($chartg)>0) {
+                foreach ($chartg as $data) {
+                    echo "'" .$data->url ."',";
+                }
+            }
+        ?>
+    ];
+    var ict_unit = [];
+    var efficiency = [];
+    var coloR = [];
+    var dynamicColors = function() {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        return "rgb(" + r + "," + g + "," + b + ")";
+    };
+
+    for (var i in labell) {
+        ict_unit.push("ICT Unit " + labell[i].ict_unit);
+        efficiency.push(labell[i].efficiency);
+        coloR.push(dynamicColors());
+    }
     var chart = new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: [
-            <?php
-                if (count($chartg)>0) {
-                    foreach ($chartg as $data) {
-                        echo "'" .$data->url ."',";
-                    }
-                }
-            ?>
-            ],
+            labels: labell,
             datasets: [{
                 label: 'Jumlah',
-                backgroundColor: [
-                    "#FF6384",
-                    "#63FF84",
-                    "#84FF63",
-                    "#8463FF",
-                    "#6384FF"
-                ],
+                backgroundColor: coloR,
                 data: [
                 <?php
                     if (count($chartg)>0) {

@@ -6,19 +6,38 @@
 		<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+		<!-- <style type="text/css">
+			
+			input[type="submit"]{
+			background:rgba(0, 0, 0, 0);
+			color:#000;
+			cursor:pointer;
+			}
+		</style> -->
 		<div class="navbar-collapse collapse" id="navbar9">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">Products</a>
+					<a class="nav-link" href="<?php echo base_url('chart')  ?>">Statistics</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Services</a>
+					<?php echo form_open('homepage/atas'); ?>
+						<input type="submit" name= "produk" value="Products"/>
+					<?php echo form_close(); ?>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Company</a>
+					<?php echo form_open('homepage/atas'); ?>
+						<input type="submit" name= "servis" value="Services"/>
+					<?php echo form_close(); ?>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Academy</a>
+					<?php echo form_open('homepage/atas'); ?>
+						<input type="submit" name= "perusahaan" value="Company"/>
+					<?php echo form_close(); ?>
+				</li>
+				<li class="nav-item">
+					<?php echo form_open('homepage/atas'); ?>
+						<input type="submit" name= "akademi" value="Academy"/>
+					<?php echo form_close(); ?>
 				</li>
 			</ul>
 		</div>

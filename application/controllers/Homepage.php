@@ -39,7 +39,24 @@ class Homepage extends CI_Controller
 	function bawah(){
 		$source='source=final';
 		$medium='&medium=footer';
-		$campaign='&campaign=contoh';
+		$campaign='&campaign=gumugu';
+
+		redirect("https://www.gumugu.com?".$source.$medium.$campaign);
+	}
+
+	function atas(){
+
+		$source='source=final';
+		$medium='&medium=navbar';
+		if($this->input->post('produk')){
+			$campaign='&campaign=products';
+		}elseif($this->input->post('servis')){
+			$campaign='&campaign=services';
+		}elseif($this->input->post('perusahaan')){
+			$campaign='&campaign=company';
+		}elseif($this->input->post('akademi')){
+			$campaign='&campaign=academy';
+		}
 
 		redirect("https://www.gumugu.com?".$source.$medium.$campaign);
 	}

@@ -28,7 +28,7 @@
 						<div class="card-header bg-transparent pt-3">
 							<div class="row align-items-center">
 								<div class="col">
-									<h3 class="mb-0 text-center">Detail Dokumen</h3>
+									<h3 class="mb-0 text-center pt-3">Detail Dokumen</h3>
 								</div>
 							</div>
 						</div>
@@ -41,7 +41,7 @@
 								}
 								?>
 
-								<table border="1">
+								<table class="table">
 									<tr>
 										<td>ID</td>
 										<td>Name</td>
@@ -62,7 +62,7 @@
 											<td><?php echo $d->file; ?></td>
 											<td>
 												<a class="btn btn-primary" href="<?php echo site_url('dokumen/detail/' . $d->id) ?>">Detail</a>
-												
+
 												<a href="<?php echo base_url() ?>"></a>
 
 											</td>

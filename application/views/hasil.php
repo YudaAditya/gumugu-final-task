@@ -92,7 +92,7 @@
 										<div class="row">
 											<div class="col text-center">
 												<a href="<?php echo base_url('hasil/save_data/' . $d->id)  ?>" class="btn btn-primary" >Go To File</a>
-												<a href="<?php echo base_url('hasil/download/' . $d->id)  ?>" class="btn btn-primary" >Download</a>
+												<!-- <a href="<?php echo base_url('hasil/download/' . $d->id)  ?>" class="btn btn-primary" >Download</a> -->
 											</div>
 										</div>
 									</div>
