@@ -36,28 +36,30 @@ class Homepage extends CI_Controller
 		$this->load->view('dokumen', $data);
 	}
 
-	function bawah(){
-		$source='source=final';
-		$medium='&medium=footer';
-		$campaign='&campaign=gumugu';
+	function bawah()
+	{
+		$source = 'source=final';
+		$medium = '&medium=footer';
+		$campaign = '&campaign=gumugu';
 
-		redirect("https://www.gumugu.com?".$source.$medium.$campaign);
+		redirect("https://www.gumugu.com?" . $source . $medium . $campaign);
 	}
 
-	function atas(){
+	public function atas()
+	{
 
-		$source='source=final';
-		$medium='&medium=navbar';
-		if($this->input->post('produk')){
-			$campaign='&campaign=products';
-		}elseif($this->input->post('servis')){
-			$campaign='&campaign=services';
-		}elseif($this->input->post('perusahaan')){
-			$campaign='&campaign=company';
-		}elseif($this->input->post('akademi')){
-			$campaign='&campaign=academy';
+		$source = 'source=final';
+		$medium = '&medium=navbar';
+		if ($this->input->post('produk')) {
+			$campaign = '&campaign=products';
+		} elseif ($this->input->post('servis')) {
+			$campaign = '&campaign=services';
+		} elseif ($this->input->post('perusahaan')) {
+			$campaign = '&campaign=company';
+		} elseif ($this->input->post('akademi')) {
+			$campaign = '&campaign=academy';
 		}
 
-		redirect("https://www.gumugu.com?".$source.$medium.$campaign);
+		redirect("https://www.gumugu.com?" . $source . $medium . $campaign);
 	}
 }

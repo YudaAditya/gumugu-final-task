@@ -5,7 +5,7 @@
 	<?php $this->load->view("_layouts/_navbar.php"); ?>
 
 	<section id=hasil>
-		<div class="container-fluid py-3">
+		<div class="container-fluid">
 			<div class="row py-5">
 				<div class="col-auto mx-auto">
 					<object class="img-hero" data="<?php echo base_url('theme/svg') ?>/undraw_filing.svg" type="image/svg+xml"></object>

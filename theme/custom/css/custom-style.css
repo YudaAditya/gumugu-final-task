@@ -14,8 +14,8 @@ body {
 }
 
 .img-hero {
-	width: 321px;
-	height: 274px;
+	width: 265px;
+	height: 226px;
 }
 
 .navbar {
@@ -83,4 +83,12 @@ body {
 .size {
 	width: 60%;
 	height: 60%;
+}
+
+input,
+.nav-link {
+	border: none;
+	background-color: transparent;
+	font-weight: bold;
+
 }

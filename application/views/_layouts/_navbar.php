@@ -21,22 +21,22 @@
 				</li>
 				<li class="nav-item">
 					<?php echo form_open('homepage/atas'); ?>
-						<input type="submit" name= "produk" value="Products"/>
+					<input class="nav-link" type="hidden" name="produk" value="Products" />
 					<?php echo form_close(); ?>
 				</li>
 				<li class="nav-item">
 					<?php echo form_open('homepage/atas'); ?>
-						<input type="submit" name= "servis" value="Services"/>
+					<input class="nav-link" type="submit" name="servis" value="Services" />
 					<?php echo form_close(); ?>
 				</li>
 				<li class="nav-item">
 					<?php echo form_open('homepage/atas'); ?>
-						<input type="submit" name= "perusahaan" value="Company"/>
+					<input class="nav-link" type="submit" name="perusahaan" value="Company" />
 					<?php echo form_close(); ?>
 				</li>
 				<li class="nav-item">
 					<?php echo form_open('homepage/atas'); ?>
-						<input type="submit" name= "akademi" value="Academy"/>
+					<input class="nav-link" type="submit" name="akademi" value="Academy" />
 					<?php echo form_close(); ?>
 				</li>
 			</ul>
