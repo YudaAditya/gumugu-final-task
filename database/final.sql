@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2020 at 08:37 PM
+-- Generation Time: May 12, 2020 at 02:00 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -112,7 +112,7 @@ INSERT INTO `goto` (`id`, `date`, `url`) VALUES
 (1, '2020-04-04', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh'),
 (2, '2020-04-04', 'https://www.researchgate.net/publication/321635737_IMPLEMENTASI_PEMBELAJARAN_ENTREPRENEURIAL_DALAM_PENDIDIKAN_SENI_RUPA?source=final&medium=detail-7&campaign=contoh'),
 (3, '2020-04-11', 'https://web.cs.toronto.edu/?source=final&medium=detail-8&campaign=contoh'),
-(4, '2020-04-11', 'https://www.linkedin.com/authwall?trk=gf&trkInfo=AQHDkeIAy45umwAAAXH17rTQ5tjUwF6v7_cDLoTqXTFLDq1lvYTtMHuB2Uz9oeaxQt2N55r3otufSKlHCRxtugTaKvSVh73h9Myts-1TJ4Dd-eD395YUWEECFQuJohj3ImZfF4o=&originalReferer=http://127.0.0.1/final/dokumen/detail/9&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fyudaaditya%2F%3Fsource%3Dfinal%26medium%3Ddetail-9%26campaign%3Dcontoh'),
+(4, '2020-04-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
 (5, '2020-04-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
 (6, '2020-04-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
 (7, '2020-04-11', 'https://web.cs.toronto.edu/?source=final&medium=detail-8&campaign=contoh'),
@@ -125,7 +125,10 @@ INSERT INTO `goto` (`id`, `date`, `url`) VALUES
 (14, '2020-04-13', 'https://web.cs.toronto.edu/?source=final&medium=detail-8&campaign=contoh'),
 (15, '2020-04-13', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
 (16, '2020-04-13', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
-(17, '2020-05-09', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh');
+(17, '2020-05-09', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh'),
+(18, '2020-05-11', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh'),
+(19, '2020-05-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
+(20, '2020-05-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh');
 
 -- --------------------------------------------------------
 
@@ -158,7 +161,10 @@ INSERT INTO `search` (`id`, `keyword`, `date`) VALUES
 (12, 'trans', '2020-05-09'),
 (13, 'transkrip', '2020-05-10'),
 (14, 'transkrip', '2020-05-10'),
-(15, 'transkrip', '2020-05-10');
+(15, 'transkrip', '2020-05-10'),
+(16, 'bambang', '2020-05-12'),
+(17, 'transkrip', '2020-05-12'),
+(18, 'cv', '2020-05-12');
 
 --
 -- Indexes for dumped tables
@@ -209,13 +215,13 @@ ALTER TABLE `download`
 -- AUTO_INCREMENT for table `goto`
 --
 ALTER TABLE `goto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `search`
 --
 ALTER TABLE `search`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
