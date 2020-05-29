@@ -41,19 +41,19 @@ class Hasil extends CI_Controller
 
 	function save_data($id)
 	{
-		$source='source=final';
-		$medium='&medium=detail-';
-		$campaign='&campaign=data';
 		$data = $this->db->get_where('document', ['id' => $id])->row();
-		$url=$data->source."?".$source.$medium.$data->id.$campaign;
+		$source='final';
+		$medium='detail-'.$data->id;
+		$campaign='data';
+		$url=$data->source."?source=".$source."&medium=".$medium."&campaign=".$campaign;
 
 		// buat ngitung
-		$now = date("Y-m-d");
 		$urls = array(
-			'date'    => $now,
-			'url'	  => $url
+			'source'	=> $source,
+			'medium'	=> $medium,
+			'campaign'	=> $campaign
 		);
-		$this->m->count_dv('goto', $urls);
+		$this->m->count_dv('campaign', $urls);
 		redirect($url);
 	}
 

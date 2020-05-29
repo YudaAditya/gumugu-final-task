@@ -68,4 +68,16 @@ class Dokumen extends CI_Controller
 		$data['dokumen'] = $this->m->getById($id, 'document');
 		$this->load->view('redirect', $data);
 	}
+
+	function hasil_search(){
+
+		$data['title'] = "Pencarian";
+		$dataa= $this->m->show_search('search');
+		// echo $dataa->keyword;
+		$data['cari'] = $dataa->keyword;
+		$data['dokumen']= $this->m->search('document', $data['cari'])->result();
+		$data['jumlah'] = count($data['dokumen']);
+		
+		$this->load->view('dokumen',$data);
+	}
 }

@@ -16,7 +16,9 @@ class Chart extends CI_Controller
 	{
 		$data['title'] = "Data Chart";
 		$data['charts']= $this->m->count("search","keyword");
-		$data['chartg']= $this->m->count("goto","url");
+		$data['schartg']= $this->m->count("campaign","source");
+		$data['mchartg']= $this->m->count("campaign","medium");
+		$data['cchartg']= $this->m->count("campaign","campaign");
 		$this->load->view('chart', $data);
 	}
 }

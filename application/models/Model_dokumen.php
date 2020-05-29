@@ -23,14 +23,13 @@ class Model_dokumen extends CI_Model
 		return $this->db->get();
 	}
 
-	function count_search($tabel, $key)
-	{
-		$this->db->insert($tabel, $key);
+	function show_search($tabel){
+		return $this->db->select('keyword')->order_by('id',"desc")->limit(1)->get($tabel)->row();
 	}
 
-	function count_dv($tabel, $date)
+	function count_dv($tabel, $param)
 	{
-		$this->db->insert($tabel, $date);
+		$this->db->insert($tabel, $param);
 	}
 
 	function count($tabel,$param2)

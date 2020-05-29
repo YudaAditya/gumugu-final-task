@@ -31,35 +31,54 @@ class Homepage extends CI_Controller
 		$key = array(
 			'keyword' => $keyword,
 		);
-		$this->m->count_search('search', $key);
+		$this->m->count_dv('search', $key);
 
-		$this->load->view('dokumen', $data);
+		// $this->load->view('dokumen', $data);
+		redirect('captcha');
 	}
 
 	function bawah()
 	{
-		$source = 'source=final';
-		$medium = '&medium=footer';
-		$campaign = '&campaign=gumugu';
+		$source = 'final';
+		$medium = 'footer';
+		$campaign = 'gumugu';
 
-		redirect("https://www.gumugu.com?" . $source . $medium . $campaign);
+		// buat ngitung
+		$urls = array(
+			'source'	=> $source,
+			'medium'	=> $medium,
+			'campaign'	=> $campaign
+		);
+		$this->m->count_dv('campaign', $urls);
+
+		redirect("https://www.gumugu.com?source=" . $source ."&medium=". $medium ."&campaign=". $campaign);
 	}
 
 	public function atas()
 	{
 
-		$source = 'source=final';
-		$medium = '&medium=navbar';
+		$source = 'final';
+		$medium = 'navbar';
 		if ($this->input->post('produk')) {
-			$campaign = '&campaign=products';
+			$campaign = 'products';
 		} elseif ($this->input->post('servis')) {
-			$campaign = '&campaign=services';
+			$campaign = 'services';
 		} elseif ($this->input->post('perusahaan')) {
-			$campaign = '&campaign=company';
+			$campaign = 'company';
 		} elseif ($this->input->post('akademi')) {
-			$campaign = '&campaign=academy';
+			$campaign = 'academy';
 		}
 
-		redirect("https://www.gumugu.com?" . $source . $medium . $campaign);
+		// buat ngitung
+		$urls = array(
+			'source'	=> $source,
+			'medium'	=> $medium,
+			'campaign'	=> $campaign
+		);
+		$this->m->count_dv('campaign', $urls);
+
+		redirect("https://www.gumugu.com?source=" . $source ."&medium=". $medium ."&campaign=". $campaign);
 	}
+
+
 }

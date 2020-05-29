@@ -19,18 +19,6 @@
 				</div>
 			</div>
 
-
-
-			<!-- <?php echo form_open('homepage/search'); ?>
-
-				<div class="form-group">
-					<label for="cari">data yang dicari</label>
-					<input type="text" class="form-control" id="cari" name="cari" placeholder="cari" autocomplete="off" autofocus>
-				</div>
-				<input class="btn btn-primary" type="submit" value="Cari" name="submit">
-
-			<?php echo form_close(); ?> -->
-
 			<?php echo form_open('homepage/search'); ?>
 			<div class="row pt-3">
 				<div class="col-5 mx-auto">

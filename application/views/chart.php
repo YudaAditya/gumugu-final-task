@@ -96,7 +96,7 @@
                         <div class="card-header bg-transparent">
                             <div class="row align-items-center pt-3">
                                 <div class="col">
-                                    <h3 class="mb-0 text-center">Link yang banyak diakses</h3>
+                                    <h3 class="mb-0 text-center">Jumlah source dari link yang dicari</h3>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,51 @@
                             <div class="chart">
                                 
                                 <!-- Chart wrapper -->
-                                <canvas id="gotoChart"></canvas>
+                                <canvas id="source"></canvas>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col-xl-12">
+                    <div class="card bg-default">
+                        <div class="card-header bg-transparent">
+                            <div class="row align-items-center pt-3">
+                                <div class="col">
+                                    <h3 class="mb-0 text-center">Jumlah medium dari link yang dicari</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Chart -->
+                            <div class="chart">
+                                
+                                <!-- Chart wrapper -->
+                                <canvas id="medium"></canvas>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col-xl-12">
+                    <div class="card bg-default">
+                        <div class="card-header bg-transparent">
+                            <div class="row align-items-center pt-3">
+                                <div class="col">
+                                    <h3 class="mb-0 text-center">Jumlah campaign dari link yang dicari</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Chart -->
+                            <div class="chart">
+                                
+                                <!-- Chart wrapper -->
+                                <canvas id="campaign"></canvas>
                                 
                             </div>
                         </div>

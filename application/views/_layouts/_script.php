@@ -66,12 +66,12 @@
     });   
 </script>
 <script type="text/javascript">
-    var ctx = document.getElementById('gotoChart').getContext('2d');
+    var ctx = document.getElementById('source').getContext('2d');
     var labell = [
         <?php
-            if (count($chartg)>0) {
-                foreach ($chartg as $data) {
-                    echo "'" .$data->url ."',";
+            if (count($schartg)>0) {
+                foreach ($schartg as $data) {
+                    echo "'" .$data->source ."',";
                 }
             }
         ?>
@@ -100,8 +100,8 @@
                 backgroundColor: coloR,
                 data: [
                 <?php
-                    if (count($chartg)>0) {
-                        foreach ($chartg as $data) {
+                    if (count($schartg)>0) {
+                        foreach ($schartg as $data) {
                             echo $data->total . ", ";
                         }
                     }
@@ -112,3 +112,96 @@
     });   
 </script>
 
+<script type="text/javascript">
+    var ctx = document.getElementById('medium').getContext('2d');
+    var labell = [
+        <?php
+            if (count($mchartg)>0) {
+                foreach ($mchartg as $data) {
+                    echo "'" .$data->medium ."',";
+                }
+            }
+        ?>
+    ];
+    var ict_unit = [];
+    var efficiency = [];
+    var coloR = [];
+    var dynamicColors = function() {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        return "rgb(" + r + "," + g + "," + b + ")";
+    };
+
+    for (var i in labell) {
+        ict_unit.push("ICT Unit " + labell[i].ict_unit);
+        efficiency.push(labell[i].efficiency);
+        coloR.push(dynamicColors());
+    }
+    var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labell,
+            datasets: [{
+                label: 'Jumlah',
+                backgroundColor: coloR,
+                data: [
+                <?php
+                    if (count($mchartg)>0) {
+                        foreach ($mchartg as $data) {
+                            echo $data->total . ", ";
+                        }
+                    }
+                ?>
+                ]
+            }]
+        },
+    });   
+</script>
+
+<script type="text/javascript">
+    var ctx = document.getElementById('campaign').getContext('2d');
+    var labell = [
+        <?php
+            if (count($cchartg)>0) {
+                foreach ($cchartg as $data) {
+                    echo "'" .$data->campaign ."',";
+                }
+            }
+        ?>
+    ];
+    var ict_unit = [];
+    var efficiency = [];
+    var coloR = [];
+    var dynamicColors = function() {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        return "rgb(" + r + "," + g + "," + b + ")";
+    };
+
+    for (var i in labell) {
+        ict_unit.push("ICT Unit " + labell[i].ict_unit);
+        efficiency.push(labell[i].efficiency);
+        coloR.push(dynamicColors());
+    }
+    var chart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labell,
+            datasets: [{
+                label: 'Jumlah',
+                backgroundColor: coloR,
+                data: [
+                <?php
+                    if (count($cchartg)>0) {
+                        foreach ($cchartg as $data) {
+                            echo $data->total . ", ";
+                        }
+                    }
+                ?>
+                ]
+            }]
+        },
+    });   
+</script>

@@ -37,7 +37,7 @@
 
 								<?php
 								if (isset($jumlah)) {
-									echo "Jumlah pencarian <b>'" . $cari . "'</b> : " . $jumlah;
+									echo "Jumlah pencarian <b>'" .htmlspecialchars($cari) . "'</b> : " . $jumlah;
 								}
 								?>
 
