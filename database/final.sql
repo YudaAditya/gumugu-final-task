@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2020 at 02:00 AM
+-- Generation Time: May 30, 2020 at 12:16 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `final`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campaign`
+--
+
+CREATE TABLE `campaign` (
+  `id` int(11) NOT NULL,
+  `source` varchar(200) NOT NULL,
+  `medium` varchar(200) NOT NULL,
+  `campaign` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `campaign`
+--
+
+INSERT INTO `campaign` (`id`, `source`, `medium`, `campaign`) VALUES
+(1, 'final', 'detail-10', 'data'),
+(2, 'final', 'navbar', 'services'),
+(3, 'final', 'footer', 'gumugu');
 
 -- --------------------------------------------------------
 
@@ -128,7 +150,8 @@ INSERT INTO `goto` (`id`, `date`, `url`) VALUES
 (17, '2020-05-09', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh'),
 (18, '2020-05-11', 'https://krsonline.unsyiah.ac.id/?source=final&medium=detail-6&campaign=contoh'),
 (19, '2020-05-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
-(20, '2020-05-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh');
+(20, '2020-05-11', 'https://www.linkedin.com/in/yudaaditya/?source=final&medium=detail-9&campaign=contoh'),
+(21, '2020-05-29', 'https://unsyiah.ac.id/?source=final&medium=detail-10&campaign=data');
 
 -- --------------------------------------------------------
 
@@ -164,11 +187,28 @@ INSERT INTO `search` (`id`, `keyword`, `date`) VALUES
 (15, 'transkrip', '2020-05-10'),
 (16, 'bambang', '2020-05-12'),
 (17, 'transkrip', '2020-05-12'),
-(18, 'cv', '2020-05-12');
+(18, 'cv', '2020-05-12'),
+(19, '', '2020-05-26'),
+(20, 'bambang', '2020-05-29'),
+(21, 'bambang', '2020-05-29'),
+(22, 'transkrip', '2020-05-29'),
+(23, 'transkrip', '2020-05-29'),
+(24, 'cv', '2020-05-29'),
+(25, 'data', '2020-05-30'),
+(26, 'bambang', '2020-05-30'),
+(27, 'implementasi', '2020-05-30'),
+(28, '<div id=\"searchBar\" class=\"input-group mb-3 input-group-lg\"> 						<div class=\"input-group-prepend\"> 							<span class=\"btn\"> 								<i class=\"fas fa-search\"></i> 							</span> 						</div> 						<input type=\"text\" class=\"form-control\" placeholder=\"Cari disini ya...\" aria-label=\"\" aria-describedby=\"basic-addon1\" id=\"cari\" name=\"cari\" placeholder=\"cari\" autocomplete=\"off\" autofocus>  						<button id=\"searchButton\" class=\"btn btn-outline-secondary\" type=\"button\"><input class=\"btn\" type=\"submit\" value=\"Cari\" name=\"submit\"></button> 					</div>', '2020-05-30'),
+(29, '<script> alert(\"Hello World!!\"); </script>', '2020-05-30');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `campaign`
+--
+ALTER TABLE `campaign`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `document`
@@ -200,6 +240,12 @@ ALTER TABLE `search`
 --
 
 --
+-- AUTO_INCREMENT for table `campaign`
+--
+ALTER TABLE `campaign`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
@@ -215,13 +261,13 @@ ALTER TABLE `download`
 -- AUTO_INCREMENT for table `goto`
 --
 ALTER TABLE `goto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `search`
 --
 ALTER TABLE `search`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
