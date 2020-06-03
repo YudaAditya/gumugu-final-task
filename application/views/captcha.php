@@ -59,12 +59,11 @@
 						<div class="card-body">
 
 							<div class="container text-center">
-								<p class="m-0" id="captImg"><?php echo $captchaImg; ?></p>
-								<div class="m-0 col-lg-12 col-sm-12">
+								<p class="m-0" id="captImg"><?php echo $captchaImg; ?>
 									<a href="" class="refreshCaptcha btn btn-primary">
-										<img src="<?php echo base_url() . 'theme/image/refresh.png'; ?>" />
+										<img src="<?php echo base_url() .'theme/image/refresh.png'; ?>" />
 									</a>
-								</div>
+								</p>
 								<div class="mx-auto col-lg-6 col-sm-9 pt-5">
 									<form method="post">
 										<div id="searchBar" class="input-group mb-3 input-group-lg">
