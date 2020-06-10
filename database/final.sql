@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2020 at 12:16 AM
+-- Generation Time: Jun 10, 2020 at 06:55 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -32,17 +32,66 @@ CREATE TABLE `campaign` (
   `id` int(11) NOT NULL,
   `source` varchar(200) NOT NULL,
   `medium` varchar(200) NOT NULL,
-  `campaign` varchar(200) NOT NULL
+  `campaign` varchar(200) NOT NULL,
+  `link` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `campaign`
 --
 
-INSERT INTO `campaign` (`id`, `source`, `medium`, `campaign`) VALUES
-(1, 'final', 'detail-10', 'data'),
-(2, 'final', 'navbar', 'services'),
-(3, 'final', 'footer', 'gumugu');
+INSERT INTO `campaign` (`id`, `source`, `medium`, `campaign`, `link`) VALUES
+(1, 'final', 'detail-10', 'data', 'https://unsyiah.ac.id/'),
+(2, 'final', 'navbar', 'services', 'https://www.gumugu.com/services#web/'),
+(3, 'final', 'footer', 'gumugu', 'https://www.gumugu.com/'),
+(4, 'final', 'detail-9', 'data', 'https://www.linkedin.com/in/yudaaditya/'),
+(5, 'final', 'navbar', 'services', 'https://www.gumugu.com/services#web/'),
+(6, 'final', 'detail-7', 'data', 'https://www.researchgate.net/publication/321635737_IMPLEMENTASI_PEMBELAJARAN_ENTREPRENEURIAL_DALAM_PENDIDIKAN_SENI_RUPA'),
+(7, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(8, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(9, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(10, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(11, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(12, 'final', 'navbar', 'company', 'https://www.gumugu.com/about/'),
+(13, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(14, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(15, 'final', 'detail-6', 'data', 'https://krsonline.unsyiah.ac.id/'),
+(16, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(17, 'final', 'navbar', 'services', 'https://www.gumugu.com/services#web/'),
+(18, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(19, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(20, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(21, 'final', 'navbar', 'services', 'https://www.gumugu.com/services#web/'),
+(22, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(23, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(24, 'final', 'navbar', 'homepage', 'https://www.gumugu.com/'),
+(25, 'final', 'navbar', 'homepage', 'https://www.gumugu.com'),
+(26, 'final', 'navbar', 'services', 'https://www.gumugu.com/services#web'),
+(27, 'final', 'navbar', 'homepage', 'https://www.gumugu.com'),
+(28, 'final', 'navbar', 'homepage', 'https://www.gumugu.com'),
+(29, 'final', 'navbar', 'final-homepage', 'http://127.0.0.1/final/'),
+(30, 'final', 'navbar', 'final-homepage', 'http://127.0.0.1/final/');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client`
+--
+
+CREATE TABLE `client` (
+  `id` int(11) NOT NULL,
+  `ip_address` varchar(250) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `client`
+--
+
+INSERT INTO `client` (`id`, `ip_address`, `date`) VALUES
+(1, '127.0.0.1', '2020-06-10'),
+(2, '127.0.0.1', '2020-06-10'),
+(3, '127.0.0.1', '2020-06-10');
 
 -- --------------------------------------------------------
 
@@ -198,7 +247,22 @@ INSERT INTO `search` (`id`, `keyword`, `date`) VALUES
 (26, 'bambang', '2020-05-30'),
 (27, 'implementasi', '2020-05-30'),
 (28, '<div id=\"searchBar\" class=\"input-group mb-3 input-group-lg\"> 						<div class=\"input-group-prepend\"> 							<span class=\"btn\"> 								<i class=\"fas fa-search\"></i> 							</span> 						</div> 						<input type=\"text\" class=\"form-control\" placeholder=\"Cari disini ya...\" aria-label=\"\" aria-describedby=\"basic-addon1\" id=\"cari\" name=\"cari\" placeholder=\"cari\" autocomplete=\"off\" autofocus>  						<button id=\"searchButton\" class=\"btn btn-outline-secondary\" type=\"button\"><input class=\"btn\" type=\"submit\" value=\"Cari\" name=\"submit\"></button> 					</div>', '2020-05-30'),
-(29, '<script> alert(\"Hello World!!\"); </script>', '2020-05-30');
+(29, '<script> alert(\"Hello World!!\"); </script>', '2020-05-30'),
+(30, 'cari', '2020-05-31'),
+(31, 'admin', '2020-06-04'),
+(32, 'admin', '2020-06-04'),
+(33, 'admin', '2020-06-05'),
+(34, 'cv', '2020-06-05'),
+(35, 'implementasi', '2020-06-05'),
+(36, 'implementasi', '2020-06-06'),
+(37, 'speech', '2020-06-07'),
+(38, 'bambang', '2020-06-08'),
+(39, 'bambang', '2020-06-08'),
+(40, 'implementasi', '2020-06-08'),
+(41, 'speech', '2020-06-08'),
+(42, 'se', '2020-06-08'),
+(43, 'sem', '2020-06-08'),
+(44, '<script> alert(\"Hello World!!\"); </script>', '2020-06-08');
 
 --
 -- Indexes for dumped tables
@@ -208,6 +272,12 @@ INSERT INTO `search` (`id`, `keyword`, `date`) VALUES
 -- Indexes for table `campaign`
 --
 ALTER TABLE `campaign`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `client`
+--
+ALTER TABLE `client`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -243,6 +313,12 @@ ALTER TABLE `search`
 -- AUTO_INCREMENT for table `campaign`
 --
 ALTER TABLE `campaign`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `client`
+--
+ALTER TABLE `client`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
@@ -267,7 +343,7 @@ ALTER TABLE `goto`
 -- AUTO_INCREMENT for table `search`
 --
 ALTER TABLE `search`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

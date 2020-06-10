@@ -13,6 +13,8 @@
 		float: center;
 		width: 100%;
 	}
+
+	.form_error{color:red;font-style:italic;float: center;}
 </style>
 
 <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
@@ -57,15 +59,25 @@
 							</div>
 						</div>
 						<div class="card-body">
-
+							
 							<div class="container text-center">
 								<p class="m-0" id="captImg"><?php echo $captchaImg; ?>
 									<a href="" class="refreshCaptcha btn btn-primary">
 										<img src="<?php echo base_url() .'theme/image/refresh.png'; ?>" />
 									</a>
 								</p>
-								<div class="mx-auto col-lg-6 col-sm-9 pt-5">
-									<form method="post">
+								<div class="form_error pb-1">
+								<?php
+									if($validation == NULL){
+										echo '';
+									}else{
+										echo $validation;
+									}
+								?>
+								</div>
+								<div class="mx-auto col-lg-6 col-sm-9 pt-3">
+									<?php echo form_open('captcha'); ?>
+										
 										<div id="searchBar" class="input-group mb-3 input-group-lg">
 											<input class="form-control" id="searchBar" autofocus type="text" name="captcha" value="" placeholder="insert here" />
 											<button id="searchButton" class="btn btn-outline-secondary" type="button">

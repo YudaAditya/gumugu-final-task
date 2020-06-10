@@ -8,10 +8,12 @@ class Captcha extends CI_Controller
 		parent::__construct();
 		// Load the captcha helper
 		$this->load->helper('captcha');
+		$this->load->library('form_validation');
 	}
 
 	public function index()
 	{
+		$data['validation'] = NULL;
 		// If captcha form is submitted
 		if ($this->input->post('submit')) {
 			$inputCaptcha = $this->input->post('captcha');
@@ -19,10 +21,9 @@ class Captcha extends CI_Controller
 			if ($inputCaptcha === $sessCaptcha) {
 				redirect('dokumen/hasil_search');
 			} else {
-				echo 'Captcha code was not match, please try again.';
+				$data['validation'] = 'Huruf yang anda isi tidak sesuai, silahkan masukan kembali';
 			}
 		}
-
 		// Captcha configuration
 		$config = array(
 			'img_path'      => 'captcha_images/',
@@ -41,7 +42,9 @@ class Captcha extends CI_Controller
 		// Send captcha image to view
 		$data['captchaImg'] = $captcha['image'];
 		$data['title'] = "Captcha";
+		
 		// Load the view
+
 		$this->load->view('captcha', $data);
 	}
 

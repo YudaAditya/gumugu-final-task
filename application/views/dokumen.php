@@ -28,7 +28,7 @@
 						<div class="card-header bg-transparent pt-3">
 							<div class="row align-items-center">
 								<div class="col">
-									<h3 class="mb-0 text-center pt-3">Detail Dokumen</h3>
+									
 								</div>
 							</div>
 						</div>

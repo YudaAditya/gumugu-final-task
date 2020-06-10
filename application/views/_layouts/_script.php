@@ -205,3 +205,50 @@
 		},
 	});
 </script>
+
+<script type="text/javascript">
+	var ctx = document.getElementById('link').getContext('2d');
+	var labell = [
+		<?php
+		if (count($lchartg) > 0) {
+			foreach ($lchartg as $data) {
+				echo "'" . $data->link . "',";
+			}
+		}
+		?>
+	];
+	var ict_unit = [];
+	var efficiency = [];
+	var coloR = [];
+	var dynamicColors = function() {
+		var r = Math.floor(Math.random() * 255);
+		var g = Math.floor(Math.random() * 255);
+		var b = Math.floor(Math.random() * 255);
+		return "rgb(" + r + "," + g + "," + b + ")";
+	};
+
+	for (var i in labell) {
+		ict_unit.push("ICT Unit " + labell[i].ict_unit);
+		efficiency.push(labell[i].efficiency);
+		coloR.push(dynamicColors());
+	}
+	var chart = new Chart(ctx, {
+		type: 'pie',
+		data: {
+			labels: labell,
+			datasets: [{
+				label: 'Jumlah',
+				backgroundColor: coloR,
+				data: [
+					<?php
+					if (count($lchartg) > 0) {
+						foreach ($lchartg as $data) {
+							echo $data->total . ", ";
+						}
+					}
+					?>
+				]
+			}]
+		},
+	});
+</script>

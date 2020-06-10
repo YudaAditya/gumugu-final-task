@@ -1,8 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
 	<div class="container">
-		<a href="<?php echo base_url() ?>" class="navbar-brand">
-			<img id="logo" src="<?php echo base_url('theme/image') ?>/logo-dark.png" alt="GUMUGU">
+		<a class="navbar-brand">
+			<?php echo form_open('homepage/atas'); ?>
+				<input type="image" id="logo" src="<?php echo base_url('theme/image') ?>/logo-dark.png" alt="GUMUGU" name="beranda" value="final"/>
+			<?php echo form_close(); ?>
 		</a>
+		
+		
 		<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9">
 			<span class="navbar-toggler-icon"></span>
 		</button>

@@ -45,13 +45,15 @@ class Hasil extends CI_Controller
 		$source='final';
 		$medium='detail-'.$data->id;
 		$campaign='data';
-		$url=$data->source."?source=".$source."&medium=".$medium."&campaign=".$campaign;
+		$link = $data->source;
+		$url=$link."?source=".$source."&medium=".$medium."&campaign=".$campaign;
 
 		// buat ngitung
 		$urls = array(
 			'source'	=> $source,
 			'medium'	=> $medium,
-			'campaign'	=> $campaign
+			'campaign'	=> $campaign,
+			'link'		=> $link
 		);
 		$this->m->count_dv('campaign', $urls);
 		redirect($url);

@@ -16,7 +16,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Total Views</h5>
-                                    <span class="h2 font-weight-bold mb-0"><?php echo $this->db->count_all('goto'); ?></span>
+                                    <span class="h2 font-weight-bold mb-0"><?php echo $this->db->count_all('campaign'); ?></span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="img-icon bg-red">
@@ -84,6 +84,28 @@
                                 
                                 <!-- Chart wrapper -->
                                 <canvas id="searchChart"></canvas>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col-xl-12">
+                    <div class="card bg-default">
+                        <div class="card-header bg-transparent">
+                            <div class="row align-items-center pt-3">
+                                <div class="col">
+                                    <h3 class="mb-0 text-center">Jumlah link yang dicari</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Chart -->
+                            <div class="chart">
+                                
+                                <!-- Chart wrapper -->
+                                <canvas id="link"></canvas>
                                 
                             </div>
                         </div>
